@@ -6,9 +6,9 @@
     state: present
 
 
-- name: Restart and enable and reload daemon service for jenkins
+- name: restart and enable service
   ansible.builtin.systemd_service:
     state: started
     daemon_reload: true
     name: jenkins
-    enabled: true  
+    enabled: true
